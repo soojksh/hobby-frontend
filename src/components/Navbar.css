@@ -1,0 +1,129 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+.navbar {
+  margin: 0 auto;
+  background-color: #6366f1;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 6rem;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.navbar-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar-profile-info p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.navbar-profile-info small {
+  color: #cccccc;
+}
+
+.navbar-search {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.navbar-search input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  color: #cccccc;
+}
+
+.navbar-menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between; /* Align the logo and menu icon on the same line */
+    align-items: center;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #6366f1;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 1rem;
+    padding: 1rem;
+    display: none;
+    height: 100vh;
+  }
+
+  .navbar-links.mobile {
+    display: flex;
+  }
+
+  .navbar-menu-icon {
+    display: block;
+  }
+
+  .navbar-search {
+    display: none;
+  }
+
+  .navbar-search.mobile {
+    display: block;
+    width: 100%; /* Ensure search bar takes full width */
+  }
+}

@@ -1,0 +1,11 @@
+.songs-container {
+  display: flex;
+  gap: 2rem;
+  padding-left: 4rem;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+
+.media-control-card {
+  flex: 0 0 calc(33.33% - 10px); /* Set card width to 33.33% (adjust for 4 cards) */
+  margin: 5px; /* Add spacing between cards */
+}
